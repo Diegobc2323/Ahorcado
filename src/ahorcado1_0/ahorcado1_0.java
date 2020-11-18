@@ -37,16 +37,21 @@ public class ahorcado1_0 {
 		
 	}
 	
-	public static void comprobarLetraIntroducida(String letra, String[] vPalabraSecreta, String vAciertos[], String vFallos[]) {
+	public static void comprobarLetraIntroducida(String letra, String[] vPalabraSecreta, String vAciertos[], String vFallos[], int vidas) {
 		
 		boolean bandera=false;
 		
 		for (int i = 0; i < vPalabraSecreta.length; i++) {
 			if (vPalabraSecreta[i].equals(letra)) {
 				vAciertos[i]=letra;
+				bandera=true;
 			}
 		}
-		//ESTAMOS AQUI
+		
+		if (bandera==false) {
+			vidas--;
+		}
+		
 		
 	}
 	
@@ -54,15 +59,14 @@ public class ahorcado1_0 {
 		// TODO Auto-generated method stub
 		Scanner leer = new Scanner(System.in);
 		int vidas = 7;
-		String palabraSecreta = "manue";
-		
+		String palabraSecreta = "calla", letra="";
 		
 		
 		//crear vectores
 		String vFallos[] = new String[vidas];
 		String vPalabraSecreta[] = new String[palabraSecreta.length()];
 		String vAciertos[] = new String[vPalabraSecreta.length];
-		String letra; 
+		
 		
 		System.out.println("Dime una letra");
 		letra = leer.nextLine();
@@ -71,7 +75,8 @@ public class ahorcado1_0 {
 		
 		inicializarVectores(vAciertos, vFallos, vPalabraSecreta, palabraSecreta);
 		imprimirFallosAciertos(vAciertos, vFallos);
-		comprobarLetraIntroducida(letra, vPalabraSecreta, vAciertos, vFallos);				
+		comprobarLetraIntroducida(letra, vPalabraSecreta, vAciertos, vFallos, vidas);				
+		
 		/*
 		do
 			

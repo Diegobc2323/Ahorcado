@@ -37,30 +37,61 @@ public class ahorcado1_0 {
 		
 	}
 	
-	public static void comprobarLetraIntroducida(String letra, String[] vPalabraSecreta, String vAciertos[], String vFallos[], int vidas) {
+	public static int comprobarLetraIntroducida(String letra, String[] vPalabraSecreta, String vAciertos[], String vFallos[], int vidas) {
 		
-		boolean bandera=false;
+		boolean acierto=false, letraRepetida=false;
 		
-		for (int i = 0; i < vPalabraSecreta.length; i++) {
-			if (vPalabraSecreta[i].equals(letra)) {
-				vAciertos[i]=letra;
-				bandera=true;
+		for (int i = 0; i < vFallos.length; i++) {
+			if (vFallos[i].equalsIgnoreCase(letra)) {
+				System.out.println("Esta letra ya se ha introducido y no esta en la palabra");
+				letraRepetida=true;
+				break;
 			}
 		}
 		
-		if (bandera==false) {
+		if (letraRepetida==false) {
+			for (int i = 0; i < vPalabraSecreta.length; i++) {
+				if (vPalabraSecreta[i].equalsIgnoreCase(letra)) {
+					vAciertos[i]=letra.toLowerCase();
+					acierto=true;
+				}
+			}
+		}
+		
+		if (acierto==false && letraRepetida==false) {
 			vidas--;
+			for (int i = 0; i < vFallos.length; i++) {
+				if (vFallos[i].equals("_")) {
+					vFallos[i] = letra;
+					break;
+				}
+			}
+		}
+		return vidas;
+		
+	}
+	
+	public static boolean heGanado(String vAciertos[]) {
+
+		
+		
+		for (int i = 0; i < vAciertos.length; i++) {
+			if (vAciertos[i].equals("_")) {
+				return false;
+			}
 		}
 		
 		
+		return true;
 	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner leer = new Scanner(System.in);
 		int vidas = 7;
-		String palabraSecreta = "calla", letra="";
-		
+		String palabraSecreta = "palabra", letra="";
+			
 		
 		//crear vectores
 		String vFallos[] = new String[vidas];
@@ -68,27 +99,41 @@ public class ahorcado1_0 {
 		String vAciertos[] = new String[vPalabraSecreta.length];
 		
 		
-		System.out.println("Dime una letra");
-		letra = leer.nextLine();
-		
-		
 		
 		inicializarVectores(vAciertos, vFallos, vPalabraSecreta, palabraSecreta);
-		imprimirFallosAciertos(vAciertos, vFallos);
-		comprobarLetraIntroducida(letra, vPalabraSecreta, vAciertos, vFallos, vidas);				
+					
 		
-		/*
-		do
+		
+		do {
+			
+			System.out.println("Dime una letra");
+			letra = leer.nextLine();
+			
+			System.out.println("\n");
+			System.out.println("\n");
+			System.out.println("\n");
+			System.out.println("\n");
+			System.out.println("\n");
+			
+			vidas = comprobarLetraIntroducida(letra, vPalabraSecreta, vAciertos, vFallos, vidas);
+			imprimirFallosAciertos(vAciertos, vFallos);
 			
 			
+			System.out.println("\n");
 			
-			
-			vidas--;
-		while(vidas!=0);
-		*/
+		}while ( heGanado(vAciertos)==false && vidas!=0);
+		
+		
+		if (heGanado(vAciertos)==true) {
+			System.out.println("Felicidades has ganado");
+		}else {
+			System.out.println("Has perdido, mejor vete al parchis que se te dara mejor (espero)");
+		}
 		
 		
 	}
+
+	
 
 	
 

@@ -85,6 +85,217 @@ public class ahorcado1_0 {
 		return true;
 	}
 	
+	private static void imprimirMuneco(int vidas) {
+		// TODO Auto-generated method stub
+		
+		switch (vidas) {
+			case 7:
+				System.out.println("_____________________________________");
+				break;
+			case 6:
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("_____________________________________");
+				break;
+			case 5:
+				System.out.println("__________________");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|          ");
+				System.out.println("|          ");
+				System.out.println("|          ");
+				System.out.println("|          ");
+				System.out.println("|          ");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("_____________________________________");
+				break;
+			case 4:
+				System.out.println("__________________");
+				System.out.println("|                |");
+				System.out.println("|          ______|______");
+				System.out.println("|         |             |");
+				System.out.println("|         |   O     O   |");
+				System.out.println("|         |      L      |");
+				System.out.println("|         |    _____    |");
+				System.out.println("|         |_____________|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("_____________________________________");
+				break;
+			case 3:
+				System.out.println("__________________");
+				System.out.println("|                |");
+				System.out.println("|          ______|______");
+				System.out.println("|         |             |");
+				System.out.println("|         |   O     O   |");
+				System.out.println("|         |      L      |");
+				System.out.println("|         |    _____    |");
+				System.out.println("|         |_____________|");
+				System.out.println("|                |");
+				System.out.println("|                |    ");
+				System.out.println("|                |   ");
+				System.out.println("|                |  ");
+				System.out.println("|                | ");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|              ");
+				System.out.println("|             ");
+				System.out.println("|            ");
+				System.out.println("|           ");
+				System.out.println("|          ");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				break;
+			case 2:
+				System.out.println("__________________");
+				System.out.println("|                |");
+				System.out.println("|          ______|______");
+				System.out.println("|         |             |");
+				System.out.println("|         |   O     O   |");
+				System.out.println("|         |      L      |");
+				System.out.println("|         |    _____    |");
+				System.out.println("|         |_____________|");
+				System.out.println("|                |");
+				System.out.println("|                |    ");
+				System.out.println("|                |   ");
+				System.out.println("|                |  ");
+				System.out.println("|                | ");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|               / \\");
+				System.out.println("|              /   \\");
+				System.out.println("|             /     \\");
+				System.out.println("|            /       \\");
+				System.out.println("|           /         \\");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("_____________________________________");
+				break;
+			case 1:
+				System.out.println("__________________");
+				System.out.println("|                |");
+				System.out.println("|          ______|______");
+				System.out.println("|         |             |");
+				System.out.println("|         |   O     O   |");
+				System.out.println("|         |      L      |");
+				System.out.println("|         |    _____    |");
+				System.out.println("|         |_____________|");
+				System.out.println("|                |");
+				System.out.println("|                |    ");
+				System.out.println("|                |   ");
+				System.out.println("|                |  ");
+				System.out.println("|                | ");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|               / \\");
+				System.out.println("|              /   \\");
+				System.out.println("|             /     \\");
+				System.out.println("|            /       \\");
+				System.out.println("|           /         \\");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("_____________________________________");
+				break;
+			case 0:
+				System.out.println("__________________");
+				System.out.println("|                |");
+				System.out.println("|          ______|______");
+				System.out.println("|         |             |");
+				System.out.println("|         |   X     X   |");
+				System.out.println("|         |      L      |");
+				System.out.println("|         |    _____    |");
+				System.out.println("|         |_____________|");
+				System.out.println("|                |       ");
+				System.out.println("|           \\    |    /");
+				System.out.println("|            \\   |   /");
+				System.out.println("|             \\  |  /");
+				System.out.println("|              \\ | /");
+				System.out.println("|               \\|/");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|                |");
+				System.out.println("|               / \\");
+				System.out.println("|              /   \\");
+				System.out.println("|             /     \\");
+				System.out.println("|            /       \\");
+				System.out.println("|           /         \\");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("_____________________________________");
+				break;
+			}
+	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -116,6 +327,7 @@ public class ahorcado1_0 {
 			System.out.println("\n");
 			
 			vidas = comprobarLetraIntroducida(letra, vPalabraSecreta, vAciertos, vFallos, vidas);
+			imprimirMuneco(vidas);
 			imprimirFallosAciertos(vAciertos, vFallos);
 			
 			
@@ -132,6 +344,8 @@ public class ahorcado1_0 {
 		
 		
 	}
+
+	
 
 	
 

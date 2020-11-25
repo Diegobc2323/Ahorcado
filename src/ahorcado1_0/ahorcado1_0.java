@@ -86,7 +86,7 @@ public class ahorcado1_0 {
 		return true;
 	}
 	
-	public static void imprimirMuneco(int vidas) {
+	public static void imprimirMuneco(int vidas, String palabraSecreta) {
 		// TODO Auto-generated method stub
 		
 		switch (vidas) {
@@ -245,12 +245,12 @@ public class ahorcado1_0 {
 				System.out.println("|         |      L      |");
 				System.out.println("|         |    _____    |");
 				System.out.println("|         |_____________|");
-				System.out.println("|                |");
-				System.out.println("|                |    ");
-				System.out.println("|                |   ");
-				System.out.println("|                |  ");
-				System.out.println("|                | ");
-				System.out.println("|                |");
+				System.out.println("|                |	  ");
+				System.out.println("|                |    / ");
+				System.out.println("|                |   / ");
+				System.out.println("|                |  /");
+				System.out.println("|                | / ");
+				System.out.println("|                |/");
 				System.out.println("|                |");
 				System.out.println("|                |");
 				System.out.println("|                |");
@@ -266,33 +266,46 @@ public class ahorcado1_0 {
 				System.out.println("_____________________________________");
 				break;
 			case 0:
-				System.out.println("__________________");
-				System.out.println("|                |");
-				System.out.println("|          ______|______");
-				System.out.println("|         |             |");
-				System.out.println("|         |   X     X   |");
-				System.out.println("|         |      L      |");
-				System.out.println("|         |    _____    |");
-				System.out.println("|         |_____________|");
-				System.out.println("|                |       ");
-				System.out.println("|           \\    |    /");
-				System.out.println("|            \\   |   /");
-				System.out.println("|             \\  |  /");
-				System.out.println("|              \\ | /");
-				System.out.println("|               \\|/");
-				System.out.println("|                |");
-				System.out.println("|                |");
-				System.out.println("|                |");
-				System.out.println("|                |");
-				System.out.println("|               / \\");
-				System.out.println("|              /   \\");
-				System.out.println("|             /     \\");
-				System.out.println("|            /       \\");
-				System.out.println("|           /         \\");
-				System.out.println("|");
-				System.out.println("|");
-				System.out.println("|");
-				System.out.println("_____________________________________");
+				int tiempo = 0;
+				do {
+					Thread.sleep(10000);
+					tiempo+= 1;
+					if (tiempo%2==0) {
+						System.out.println("__________________");
+						System.out.println("|                |");
+						System.out.println("|          ______|______");
+						System.out.println("|         |             |");
+						System.out.println("|         |   X     X   |");
+						System.out.println("|         |      L      |");
+						System.out.println("|         |    _____    |");
+						System.out.println("|         |_____________|");
+						System.out.println("|                |       ");
+						System.out.println("|           \\    |    /");
+						System.out.println("|            \\   |   /");
+						System.out.println("|             \\  |  /");
+						System.out.println("|              \\ | /");
+						System.out.println("|               \\|/");
+						System.out.println("|                |");
+						System.out.println("|                |");
+						System.out.println("|                |");
+						System.out.println("|                |");
+						System.out.println("|               / \\");
+						System.out.println("|              /   \\");
+						System.out.println("|             /     \\");
+						System.out.println("|            /       \\");
+						System.out.println("|           /         \\");
+						System.out.println("|");
+						System.out.println("|");
+						System.out.println("|");
+						System.out.println("_____________________________________");
+						
+						System.out.println("\n\nHas perdido, la palabra era "+palabraSecreta+", mejor vete al parchis que se te dara mejor (espero)");
+						System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+					}else {
+						//muñeco con los brazos abajo
+					}
+					
+				} while (tiempo<10);
 				break;
 			}
 	}
@@ -342,7 +355,7 @@ public class ahorcado1_0 {
 			System.out.println("\n");
 			
 			vidas = comprobarLetraIntroducida(letra, vPalabraSecreta, vAciertos, vFallos, vidas);
-			imprimirMuneco(vidas);
+			imprimirMuneco(vidas,palabraSecreta);
 			imprimirFallosAciertos(vAciertos, vFallos);
 			
 			
@@ -353,8 +366,6 @@ public class ahorcado1_0 {
 		
 		if (heGanado(vAciertos)==true) {
 			System.out.println("Felicidades has ganado");
-		}else {
-			System.out.println("Has perdido, la palabra era "+palabraSecreta+", mejor vete al parchis que se te dara mejor (espero)");
 		}
 		
 		

@@ -1,5 +1,6 @@
 package ahorcado1_0;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class ahorcado1_0 {
@@ -85,7 +86,7 @@ public class ahorcado1_0 {
 		return true;
 	}
 	
-	private static void imprimirMuneco(int vidas) {
+	public static void imprimirMuneco(int vidas) {
 		// TODO Auto-generated method stub
 		
 		switch (vidas) {
@@ -296,12 +297,26 @@ public class ahorcado1_0 {
 			}
 	}
 	
+	public static String palabraAleatoria() {
+		
+		
+		int pos = 0;
+		
+		Random r = new Random();
+		
+		String[] vPalabras = {"Juan", "Pepe" , "palabra", "perro", "adrian", "amarillo", "cubata", "rojo", "espada"};
+		pos = r.nextInt(vPalabras.length);
+		
+		return vPalabras[pos];
+		
+		
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner leer = new Scanner(System.in);
 		int vidas = 7;
-		String palabraSecreta = "palabra", letra="";
+		String palabraSecreta = palabraAleatoria(), letra="";
 			
 		
 		//crear vectores
@@ -339,7 +354,7 @@ public class ahorcado1_0 {
 		if (heGanado(vAciertos)==true) {
 			System.out.println("Felicidades has ganado");
 		}else {
-			System.out.println("Has perdido, mejor vete al parchis que se te dara mejor (espero)");
+			System.out.println("Has perdido, la palabra era "+palabraSecreta+", mejor vete al parchis que se te dara mejor (espero)");
 		}
 		
 		

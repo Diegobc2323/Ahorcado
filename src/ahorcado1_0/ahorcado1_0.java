@@ -86,7 +86,7 @@ public class ahorcado1_0 {
 		return true;
 	}
 	
-	public static void imprimirMuneco(int vidas, String palabraSecreta) {
+	public static void imprimirMuneco(int vidas, String palabraSecreta) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		switch (vidas) {
@@ -268,9 +268,10 @@ public class ahorcado1_0 {
 			case 0:
 				int tiempo = 0;
 				do {
-					Thread.sleep(10000);
+					Thread.sleep(1000);
 					tiempo+= 1;
 					if (tiempo%2==0) {
+						System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 						System.out.println("__________________");
 						System.out.println("|                |");
 						System.out.println("|          ______|______");
@@ -300,9 +301,39 @@ public class ahorcado1_0 {
 						System.out.println("_____________________________________");
 						
 						System.out.println("\n\nHas perdido, la palabra era "+palabraSecreta+", mejor vete al parchis que se te dara mejor (espero)");
-						System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						
 					}else {
-						//muñeco con los brazos abajo
+						System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						System.out.println("__________________");
+						System.out.println("|                |");
+						System.out.println("|          ______|______");
+						System.out.println("|         |             |");
+						System.out.println("|         |   X     X   |");
+						System.out.println("|         |      L      |");
+						System.out.println("|         |    _____    |");
+						System.out.println("|         |_____________|");
+						System.out.println("|                |       ");
+						System.out.println("|                |   ");
+						System.out.println("|                |   ");
+						System.out.println("|                |  ");
+						System.out.println("|                | ");
+						System.out.println("|               /|\\");
+						System.out.println("|              / | \\");
+						System.out.println("|             /  |  \\");
+						System.out.println("|            /   |   \\");
+						System.out.println("|           /    |    \\");
+						System.out.println("|               / \\");
+						System.out.println("|              /   \\");
+						System.out.println("|             /     \\");
+						System.out.println("|            /       \\");
+						System.out.println("|           /         \\");
+						System.out.println("|");
+						System.out.println("|");
+						System.out.println("|");
+						System.out.println("_____________________________________");
+						
+						System.out.println("\n\nHas perdido, la palabra era "+palabraSecreta+", mejor vete al parchis que se te dara mejor (espero)");
+						
 					}
 					
 				} while (tiempo<10);
@@ -325,7 +356,7 @@ public class ahorcado1_0 {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		Scanner leer = new Scanner(System.in);
 		int vidas = 7;

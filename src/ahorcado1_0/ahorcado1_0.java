@@ -75,7 +75,6 @@ public class ahorcado1_0 {
 	public static boolean heGanado(String vAciertos[]) {
 
 		
-		
 		for (int i = 0; i < vAciertos.length; i++) {
 			if (vAciertos[i].equals("_")) {
 				return false;
@@ -277,7 +276,7 @@ public class ahorcado1_0 {
 						System.out.println("|          ______|______");
 						System.out.println("|         |             |");
 						System.out.println("|         |   X     X   |");
-						System.out.println("|         |      L      |");
+						System.out.println("|         |      L      |	  	mori por tu culpa");
 						System.out.println("|         |    _____    |");
 						System.out.println("|         |_____________|");
 						System.out.println("|                |       ");
@@ -309,7 +308,7 @@ public class ahorcado1_0 {
 						System.out.println("|          ______|______");
 						System.out.println("|         |             |");
 						System.out.println("|         |   X     X   |");
-						System.out.println("|         |      L      |");
+						System.out.println("|         |      L      |	 	gracias por nada");
 						System.out.println("|         |    _____    |");
 						System.out.println("|         |_____________|");
 						System.out.println("|                |       ");
